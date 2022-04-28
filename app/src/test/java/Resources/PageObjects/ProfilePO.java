@@ -28,7 +28,6 @@ public class ProfilePO {
     private final By LAST_NAME_IN   = By.xpath("//*[@id=\"profile_lastName\"]");
     private final By COUNTRY        = By.xpath("/html/body/div[1]/div[2]/main/div[2]/div[1]/div/div/div[2]/div[1]/div[1]");
     private final By COUNTRY_IN     = By.xpath("//*[@id=\"profile_country\"]");
-    private final By PICTURE_BUTTON = By.xpath("/html/body/div[1]/div[2]/main/div[2]/div[1]/div/div/div[1]/div/div/button");
     private final By SAVE_BUTTON    = By.xpath("//*[@id=\"profile_save\"]");
     
     public ProfilePO(WebDriver driver) {
@@ -42,12 +41,6 @@ public class ProfilePO {
         Assert.assertTrue(driver.getCurrentUrl().equals("https://www.chess.com/member/"+configFileReader.getUsername()));
         WebElement editButton = locator.locate(EDIT_PROFILE);
         editButton.click();
-    }
-
-    public void setProfileImage() {
-        // Locates the profile picture edit button and clicks on it.
-        WebElement changePicButton = locator.locate(PICTURE_BUTTON);
-        changePicButton.click();
     }
 
     public void setCountry(String countryCode) {

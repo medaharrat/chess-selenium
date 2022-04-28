@@ -20,7 +20,7 @@ public class MainTests {
     public void setup() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        // Avoid cloudera checks
+        // Avoid cloudflare check
         options.setExperimentalOption("useAutomationExtension", false); 
         options.addArguments("--disable-blink-features=AutomationControlled");
         driver = new ChromeDriver(options);
