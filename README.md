@@ -13,3 +13,7 @@ Tests covered are the following:
 * [Google Chrome](https://www.google.com/chrome)
 ### Run tests
 `gradle test -info`
+### Possible Improvements
+* Add support to more browsers
+* Add headless mode
+* Add more tests
